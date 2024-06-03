@@ -1,0 +1,27 @@
+{
+  "name": "container-management",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "prisma": "^5.14.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.14.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2"
+  }
+}

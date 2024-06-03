@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - db
+    environment:
+      - DATABASE_HOST=db 
+
+  db:
+    image: postgres:13
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: container_db
+    ports:
+      - "5435:5432"
+
+volumes:
+  pgdata:
